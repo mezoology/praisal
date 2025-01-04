@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Results</title>
+</head>
+<body>
+    <h1>Search Results</h1>
+    {% if item %}
+    <p>Item ID: {{ item.type_id }}</p>
+    <p>Price: {{ item.price }} ISK</p>
+    <p>Quantity: {{ item.volume_remain }}</p>
+    <p>Location ID: {{ item.location_id }}</p>
+    {% else %}
+    <p>{{ message }}</p>
+    {% endif %}
+    <br>
+    <a href="/search">Search Again</a>
+    <a href="/">Back to Home</a>
+</body>
+</html>
